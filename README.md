@@ -100,13 +100,13 @@ Run all the commands in a specific header or a particular command by referencing
 - To run all commands in a header:
 
 ```bash
-autorun run <header>
+autorun cmd <header>
 ```
 
 - To run a specific command within a header:
 
 ```bash
-autorun run <header>.<command_name>
+autorun cmd <header>.<command_name>
 ```
 
 ## Example Workflow

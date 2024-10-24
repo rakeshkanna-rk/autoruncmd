@@ -28,7 +28,7 @@ def init(header=None):
 @click.command(help="Run script from config file")
 @click.argument("header", type=click.STRING, required=True)
 @click.option("--config", "-c", help="Specify config file", type=click.STRING, required=False)
-def run(header=None, config=None):
+def cmd(header=None, config=None):
     runScript(header, config)
 
 @click.command(help="Add script to config file")
@@ -46,6 +46,6 @@ def find(config, line, header):
     findLine(config, line, header)
 
 cli.add_command(init)
-cli.add_command(run)
+cli.add_command(cmd)
 cli.add_command(add)
 cli.add_command(find)
