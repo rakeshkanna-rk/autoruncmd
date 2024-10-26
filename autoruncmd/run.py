@@ -18,6 +18,18 @@ sec_header = False
 check_line = []
 
 def runScript(run_cmd, config_file):
+    '''
+    Runs script from config file based on header name and script name.
+
+    Parameters:
+    - run_cmd (str): Header name
+    - config_file (str): Config file path
+
+    Warning:
+    - If no config file is provided, the default config file ".pyscripts" will be used.
+    
+    Requested not to use this function. (Developers)
+    '''
 
     global error
     global cmd

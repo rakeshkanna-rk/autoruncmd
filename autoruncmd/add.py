@@ -4,6 +4,19 @@ import os
 from autoruncmd.constants import *
 
 def addtoScript(config, header, script):
+    """
+    Adds script to config file based on header name and script name.
+
+    Parameters:
+    - config (str): Config file path
+    - header (str): Header name
+    - script (str): Script name
+
+    Warning:
+    - If no config file is provided, the default config file ".pyscripts" will be used.
+    
+    **Requested not to use this function. (Developers)**
+    """
     found_header = False
     if "=" not in script:
         print(f"SyntaxError: No '=' in script name \nUsage: {MAGENTA}pyauto add -c <config_file> -h <header_name> -s '<script_name>=<script_to_run>'{RESET}")

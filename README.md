@@ -138,3 +138,11 @@ If you have any suggestions or feedback, please [open an issue](https://github.c
 ## License
 
 This project is licensed under the [MIT License](https://github.com/rakeshkanna-rk/autoruncmd/blob/main/LICENSE).
+
+## Package Information
+
+**Version**: 0.1.1
+**Title**: AutoRunCmd
+**Author**: [Rakesh Kanna](https://github.com/rakeshkanna-rk/)
+**Github**: [https://github.com/rakeshkanna-rk/autoruncmd](https://github.com/rakeshkanna-rk/autoruncmd)
+**PyPI**: [https://pypi.org/project/autoruncmd/](https://pypi.org/project/autoruncmd/)

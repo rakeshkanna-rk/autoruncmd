@@ -5,6 +5,17 @@ import os
 from autoruncmd.constants import *
 
 def createConfig(name):
+    '''
+    Creates a config file based on given file name.
+
+    Parameters:
+    - name (str): Config file name
+
+    Warning:
+    - If no config file is provided, the default config file ".pyscripts" will be used.
+    
+    Requested not to use this function. (Developers)
+    '''
     created = False
     if not name:
         if checkPath(".pyscripts"):

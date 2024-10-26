@@ -2,6 +2,19 @@ from textPlay.colors import *
 from autoruncmd.constants import *
 
 def findLine(config, line, head):
+    '''
+    Finds line in config file based on header name and line startswith.
+
+    Parameters:
+    - config (str): Config file path
+    - line (str): Line startswith
+    - head (str): Header name
+
+    Warning:
+    - If no config file is provided, the default config file ".pyscripts" will be used.
+    
+    Requested not to use this function. (Developers)
+    '''
 
     found_line = False
     headerFound = False
