@@ -1,5 +1,6 @@
 import json
 import os
+import subprocess
 from textPlay.colors import *
 import time
 
@@ -17,7 +18,7 @@ sec_header = False
 
 check_line = []
 
-def runScript(run_cmd, config_file):
+def runScript(run_cmd, config_file, pipe):
     '''
     Runs script from config file based on header name and script name.
 
@@ -146,7 +147,16 @@ def runScript(run_cmd, config_file):
 
         for cmds in cmdstorun:
             print(f"\nExecuting: {MAGENTA}{cmds}{RESET}\n")
-            os.system(cmds)
+            if pipe:
+                result = subprocess.run(cmd.split(" "), stdout=subprocess.PIPE, stdin=subprocess.PIPE, text=True)
+                if result.returncode == 0:
+                    print("All Commands Executed")
+                else:
+                    print("ERROR: An error occured during the exection.")
+                
+            else:
+                os.system(cmds)
+            
 
     else:
         print("No commands executing")

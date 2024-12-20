@@ -42,5 +42,5 @@ def createConfig(name):
             print(f"{RED}Config file not created{RESET} @ {BLUE}{name}{RESET}")
             exit()
 
-    print(f"{GREEN}Config file created{RESET} @ {BLUE}{os.getcwd()}{RESET} \nUse: {MAGENTA}pyauto run{RESET}")
+    print(f"{GREEN}Config file created{RESET} @ {BLUE}{os.getcwd()}{RESET} \nUse: {MAGENTA}autorun add{RESET}\nTo add a command")
     print("To run the script")

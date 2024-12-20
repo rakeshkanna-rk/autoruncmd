@@ -17,19 +17,20 @@ atexit.register(terminate)
 @click.group()
 @click.version_option(version= __version__ , prog_name= __title__)
 def cli():
-    print(f"\n\t{MAGENTA}{__title__}{RESET} v{MAGENTA}{__version__}{RESET}\n")
+    print(f"\n\t{MAGENTA}{__title__}{RESET} {MAGENTA}v{__version__}{RESET}\n")
     pass
 
 @click.command(help="Create config file")
-@click.argument("header", type=click.STRING, required=False)
+@click.argument("header", type=click.STRING, required=False, help="Header of the scripts to run")
 def init(header=None):
     createConfig(header)
 
 @click.command(help="Run script from config file")
-@click.argument("header", type=click.STRING, required=True)
+@click.argument("header", type=click.STRING, required=True, help="Header of the scripts to run")
 @click.option("--config", "-c", help="Specify config file", type=click.STRING, required=False)
-def cmd(header=None, config=None):
-    runScript(header, config)
+@click.option("--pipe", "-p", help="Pipe the commands execting", type=click.BOOL, is_flag=True)
+def cmd(header=None, config=None, pipe=False):
+    runScript(header, config, pipe)
 
 @click.command(help="Add script to config file")
 @click.option("--config", "-c", help="Specify config file", type=click.STRING, default=".pyscripts")
