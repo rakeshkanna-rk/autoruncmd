@@ -124,7 +124,6 @@ def runScript(run_cmd, config_file, pipe):
     elif not cmd_line and not header_check and not comment:
         print(f"{error}Syntax Error @ line {index}")
 
-
     cmdstorun = []
     for c in cmd[1:]:
         for i, value in enumerate(c):

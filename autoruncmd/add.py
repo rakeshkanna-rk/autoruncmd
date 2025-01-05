@@ -35,14 +35,14 @@ def addtoScript(config, header, script):
                             lines.insert(i + 1, f"{script}\n")
                             with open(config, "w") as f:
                                 f.writelines(lines)
-                            print(f"Added command: {MAGENTA}{header}.{script.split('=')[0]}={script.split('=')[1]}{RESET}") 
+                            print(f"Added command: {MAGENTA}{header}.{script}{RESET}") 
                             print(f"{GREEN}Script added{RESET} @ {BLUE}{config}{RESET} \n\nUse: {MAGENTA}autorun cmd {header}{RESET}")
                             print("To run the scripts")
                             break
                 else:
                     with open(config, "a") as f:
                         f.write(f"\n[py.{header}]\n{script}\n")
-                    print(f"Added command: {MAGENTA}{header}.{script.split('=')[0]}={script.split('=')[1]}{RESET}")
+                    print(f"Added command: {MAGENTA}{header}.{script}{RESET}")
                     print(f"{GREEN}New header and script added{RESET} @ {BLUE}{config}{RESET} \n\nUse: {MAGENTA}autorun cmd {header}{RESET}")
                     print("To run the scripts")
                     found_header = True

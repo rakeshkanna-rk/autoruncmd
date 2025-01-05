@@ -16,13 +16,13 @@ setup(
     long_description_content_type="text/markdown",
     packages=find_packages(),
     keywords=[
-    "automation",
-    "build tools",
-    "makefile",
-    "python scripts",
-    "task runner",
-    "command-line tool",
-    "config file"
+        "automation",
+        "build tools",
+        "makefile",
+        "python scripts",
+        "task runner",
+        "command-line tool",
+        "config file"
     ],
     python_requires=">=3.6",
     install_requires= ['textPlay'],
